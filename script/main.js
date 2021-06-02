@@ -13,22 +13,9 @@ const overlay = document.createElement('div');
 overlay.classList.add('overlay');
 document.body.insertAdjacentElement('beforeend', overlay);
 
-/* 
-const openMenu = function openMenu(){}
-//function declaration v potoke and function expression
-//strelochnie funkcii
-const openMenu=() => {}
-
-function foo(){}
-//ne yavlyaetsya instrukciei
-
-//vizov
-openMenu('max');*/
-
-//funccii
 const openMenu=()=>{
-    //catalog.className = '111';//pereimenovat' class
-    catalog.classList.add('open');//otkrivaem menu
+    //catalog.className = '111';//переимен класс
+    catalog.classList.add('open');//открываем меню
     overlay.classList.add('active');
 } 
 
@@ -43,7 +30,7 @@ const openSubMenu = (event) => {
  const target = event.target;
  const itemList = target.closest('.catalog-list__item');
  if (itemList){
-     subcatalogHeader.innerHTML = itemList.innerHTML;//vibiraem text iz targeta i zapis v header
+     subcatalogHeader.innerHTML = itemList.innerHTML;//выбираем текст из таргета и запис в хедер
      subCatalog.classList.add('subopen');
  }
 }
